@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - web-app.sedp.tallturtle.network
-      secretName: app-spider-tls
+      secretName: tls-vcluster-platform
   rules:
   - http:
       paths:
