@@ -15,10 +15,10 @@ spec:
     - host: web-app.{{ .Values.appMode }}.sedp.tallturtle.network
       http:
         paths:
-        - path: /
+        - path: /whiskey
           pathType: Prefix
           backend:
             service:
-              name: {{ include "sample-app.fullname" . }}-sedp-app
+              name: {{ include "sample-app.fullname" . }}
               port:
                 number: 443
