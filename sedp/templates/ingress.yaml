@@ -9,7 +9,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - spider-app.sedp.tallturtle.network
+        - web-app.sedp.tallturtle.network
       secretName: app-spider-tls
   rules:
   - http:
