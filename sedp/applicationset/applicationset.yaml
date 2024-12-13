@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/rarnhart/argocd
+        repoURL: https://github.com/rarnhart/argocd.git
         revision: HEAD
         directories:
           # here it will read the paths under configs and the subpaths under the config paths
@@ -24,8 +24,8 @@ spec:
           valueFiles:
             - "configs/{{path[2]}}/{{path.basename}}/values.yaml"
             - "configs/{{path[2]}}/values.yaml"
-        path: demo
-        repoURL: https://github.com/rarnhart/argocd
+        path: sedp
+        repoURL: https://github.com/rarnhart/argocd.git
         targetRevision: HEAD
       syncPolicy:
         automated:
@@ -35,4 +35,4 @@ spec:
       destination:
         # specify different destinations
         namespace: "{{path.basename}}"
-        server: https://kubernetes.default.svc
+        server: "https://vcluster.sedp.tallturtle.network/kubernetes/project/web-app-{{path.basename}}/virtualcluster/{{path.basename}}-cluster"
