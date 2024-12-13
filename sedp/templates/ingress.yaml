@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sedp-app-ingress
-  namespace: {{ .Values.image.appMode }}
+  namespace: {{ .Values.appMode }}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -18,6 +18,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: app-spider-{{ .Values.image.appMode }}-sedp-app
+            name: app-spider-{{ .Values.appMode }}-sedp-app
             port:
               number: 443
