@@ -33,4 +33,4 @@ spec:
       destination:
         # specify different destinations
         namespace: "{{path.basename}}"
-        server: "https://vcluster.sedp.tallturtle.network/kubernetes/project/default/virtualcluster/vcluster-argo-testx4x2q"
+        server: "https://vcluster.sedp.tallturtle.network/kubernetes/project/web-app-qa/virtualcluster/qa-clusert"
