@@ -19,6 +19,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: app-spider-{{ .Values.appMode }}-sedp-app
+              name: {{ include "sample-app.fullname" . }}-{{ .Values.appMode }}-sedp-app
               port:
                 number: 443
