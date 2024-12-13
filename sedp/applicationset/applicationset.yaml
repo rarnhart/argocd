@@ -33,4 +33,4 @@ spec:
       destination:
         # specify different destinations
         namespace: "{{path.basename}}"
-        server: https://kubernetes.default.svc
+        server: https://vcluster.sedp.tallturtle.network/kubernetes/project/web-app-qa/virtualcluster/qa-cluster
