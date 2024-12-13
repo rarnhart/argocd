@@ -2,23 +2,23 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sedp-app-ingress
-  namespace: qa
+  namespace: {{ .Values.appMode }}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - web-app.qa.sedp.tallturtle.network
+        - web-app.{{ .Values.appMode }}.sedp.tallturtle.network
       secretName: tls-vcluster-platform
   rules:
-    - host: web-app.qa.sedp.tallturtle.network
+    - host: web-app.{{ .Values.appMode }}.sedp.tallturtle.network
       http:
         paths:
-        - path: /spider
+        - path: /
           pathType: Prefix
           backend:
             service:
-              name: app-spider-qa-sedp-app
+              name: app-spider-{{ .Values.appMode }}-sedp-app
               port:
                 number: 443
