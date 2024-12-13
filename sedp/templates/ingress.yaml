@@ -12,7 +12,7 @@ spec:
         - web-app.sedp.tallturtle.network
       secretName: tls-vcluster-platform
   rules:
-  - http:
+  - http: https://web-app.sedp.tallturtle.network
       paths:
       - path: /spider
         pathType: Prefix
