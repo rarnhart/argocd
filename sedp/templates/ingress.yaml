@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - spider-app.sedp.tallturtle.network
-      secretName: argocd-server-tls
+      secretName: app-spider-tls
   rules:
   - http:
       paths:
