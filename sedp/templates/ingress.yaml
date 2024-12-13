@@ -7,6 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - spider-app.sedp.tallturtle.network
+      secretName: argocd-server-tls
   rules:
   - http:
       paths:
@@ -16,4 +20,4 @@ spec:
           service:
             name: app-spider-staging-sedp-app
             port:
-              number: 80
+              number: 443
