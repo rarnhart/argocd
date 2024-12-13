@@ -14,7 +14,7 @@ spec:
   rules:
   - http: web-app.sedp.tallturtle.network
       paths:
-      - path: /spider
+      - path: /spide
         pathType: Prefix
         backend:
           service:
