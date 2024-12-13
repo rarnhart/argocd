@@ -12,12 +12,13 @@ spec:
         - web-app.qa.sedp.tallturtle.network
       secretName: tls-vcluster-platform
   rules:
-  - http: web-app.qa.sedp.tallturtle.network
-      paths:
-      - path: /spider
-        pathType: Prefix
-        backend:
-          service:
-            name: app-spider-qa-sedp-app
-            port:
-              number: 443
+    - host: web-app.qa.sedp.tallturtle.network
+      http:
+        paths:
+        - path: /spider
+          pathType: Prefix
+          backend:
+            service:
+              name: app-spider-qa-sedp-app
+              port:
+                number: 443
