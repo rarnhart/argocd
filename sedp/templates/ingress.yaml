@@ -15,7 +15,7 @@ spec:
     - host: web-app.{{ .Values.image.tag }}.sedp.tallturtle.network
       http:
         paths:
-        - path: /whiskey
+        - path: /{{ .Values.name }}
           pathType: Prefix
           backend:
             service:
