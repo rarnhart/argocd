@@ -15,8 +15,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: NodePort
-  port: 30008
+  type: ClusterIP
 
 
 ## Application level settings  
