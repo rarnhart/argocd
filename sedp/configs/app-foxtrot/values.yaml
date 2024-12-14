@@ -2,4 +2,4 @@ namespaces:
   - prod
   - staging
   - qa
-name: spider
+name: foxtrot
