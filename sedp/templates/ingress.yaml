@@ -9,7 +9,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - web-app.{{ .Values.appMode }}.sedp.tallturtle.network
+        - web-app.{{ .Values.image.tag }}.sedp.tallturtle.network
       secretName: tls-vcluster-platform
   rules:
     - host: web-app.{{ .Values.image.tag }}.sedp.tallturtle.network
