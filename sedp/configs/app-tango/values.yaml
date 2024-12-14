@@ -1,4 +1,4 @@
 namespaces:
   - prod
   - staging
-name: iron
+name: tango
