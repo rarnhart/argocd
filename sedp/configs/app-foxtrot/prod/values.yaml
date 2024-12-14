@@ -21,7 +21,6 @@ service:
 
 
 ## Application level settings  
-application: foxtrot
 appMode: production
 certificatePath: /etc/ssl/prod
 paypalURLLocation: https://prod.paypal.example.com
